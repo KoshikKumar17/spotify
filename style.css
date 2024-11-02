@@ -128,7 +128,7 @@
     }
 
 /* HTML: <div class="loader"></div> */
-.loader {
+#loader {
   width: 34px;
   aspect-ratio: 1;
   display: none;
