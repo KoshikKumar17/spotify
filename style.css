@@ -219,25 +219,10 @@
         clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 30%);
         animation: rotate 1s linear infinite;
     }
-    /*@keyframes rotate {
+    @keyframes rotate {
         from {
             transform: rotatez(0deg);
         }
         to {
             transform: rotatez(360deg);
         }
-    }*/
-	#help {
-		text-align: left;
-		border-top: 1px solid #eee;
-		max-width: 850px;
-		margin: 30px auto;
-	}
-	.help-title {
-		color: var(--main-bg1-color);
-	}
-	#help img{
-		max-width: 100%
-    }
-
-    
