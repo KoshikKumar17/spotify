@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Spotify Downloader that let's you download songs, albums, and playlists from spotify in MP3">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' type='text/javascript'></script>
 <link rel="canonical" href="https://KoshikKumar17.github.io/spotifydl">
 <script>
 	var media = 'spotify';
@@ -19,10 +20,30 @@
 	  --main-bg1-color: black;
 	  --main-bg2-color: grey;
 	}
+.loader {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: #514b82;
+  border: 2px solid;
+  position: relative;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l6 2s infinite;
+}
+@keyframes l6 {
+    100% {inset:0}
+}
 </style>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
-
+<div class="loader"></div>
 <body>
 <nav style="color:black;size:20px;"><a href="https://KoshikKumar17.github.io"><b>Koshik Kumar</b></a></nav>
 <div id="main">
@@ -48,6 +69,12 @@
 var text = document.lastModified;
 document.getElementById("lastModified").innerHTML = text;
 </script>
-  
+
+<script>
+$(window).bind("load", function () {
+    jQuery(".loader").fadeOut();
+});
+</script>
+
 </body>
 </html>
