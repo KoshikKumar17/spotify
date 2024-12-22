@@ -7,7 +7,6 @@ var host = 'https://api.fabdl.com';
 
 function get_mp3()
 {
-	event.preventDefault();
 	if (typeof timer != 'undefined') {
 		clearInterval(timer);
 	}
